@@ -1,0 +1,55 @@
+from abc import ABC , abstractmethod
+
+
+class Animal(ABC):
+    zoo__name="The Python Zoo"
+    def __init__(self,name,species):
+        self.name=name
+        self.species=species
+
+        @abstractmethod
+        def make_sound(self):
+            pass
+
+        @abstractmethod
+        def eat(self):
+            pass
+
+class Lion(Animal):
+    
+    def __init__(self, name):
+        super().__init__(name, species="Lion")
+    
+    def make_sound(self):
+        print("Leo")
+    
+    def eat(self):
+        print(f"{self.name} eats a large piece of meat.")
+
+class Monkey(Animal):
+    
+    def __init__(self, name):
+        super().__init__(name, species="Monkey")
+    
+    def make_sound(self):
+        print("Momo")
+    
+    def eat(self):
+        print(f"{self.name} peels and eats a banana.")
+
+class zookeaper:
+    def __init__(self,name):
+        self.name=name
+        self._employ_id=(34)
+        self.__salary= 45000
+
+
+Animal=[Lion("Leo"),Monkey("Momo")]
+
+zookeaper=zookeaper("Hamza")
+
+for animal in Animal:
+    animal.make_sound()     # Same method call
+    animal.eat()            # Same method call
+    print(f"{animal.name} lives at {animal.zoo__name}")
+    print("??????")
