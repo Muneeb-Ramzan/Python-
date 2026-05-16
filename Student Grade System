@@ -1,0 +1,35 @@
+class Student:
+    
+    def __init__(self):
+        self.name = ""
+        self.marks = 0
+        self.grade = ""
+
+    def enter_data(self):
+        self.name = input("Enter Student Name: ")
+        self.marks = int(input("Enter Marks: "))
+
+    def calculate_grade(self):
+        if self.marks >= 80:
+            self.grade = "A"
+        elif self.marks >= 70:
+            self.grade = "B"
+        elif self.marks >= 60:
+            self.grade = "C"
+        elif self.marks >= 50:
+            self.grade = "D"
+        else:
+            self.grade = "F"
+
+    def display_result(self):
+        print("\n----- Result -----")
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+        print("Grade:", self.grade)
+
+
+# Start
+s1 = Student()          # Create Student Object
+s1.enter_data()         # Enter Student Data
+s1.calculate_grade()    # Calculate Grade
+s1.display_result()     # Display Result
