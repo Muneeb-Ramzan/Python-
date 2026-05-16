@@ -1,0 +1,21 @@
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+
+    @abstractmethod
+    def pay(self,amount):
+        self.amount=amount
+
+class Cradit(Payment):
+    def pay(self,amount):
+        self.amount=amount
+        print(f"Paid {self.amount} Using Cradit Card :")
+
+class Paypal(Payment):
+    def pay(self,amount):
+        self.amount=amount
+        print(f"Paid {self.amount} Using Cradit Card :")
+
+list=[Cradit(),Paypal()]
+for i in list:
+  i.pay(100)
