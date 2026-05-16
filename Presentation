@@ -1,0 +1,30 @@
+# student name = []
+# semester = []
+# Roll No = []
+
+# for s,m,r in range():
+#     studen =input("Enter your name :")
+#     sems =input("Enter your semster: ")
+#     roll = input("Enter your rollNo: ")
+#     print(student,semester,rollno)
+
+students = []
+
+# for i in range(1, 6):
+#     print(f"\nEnter data for student {i}")
+name = input("Enter student name: ")
+semester = input("Enter semester: ")
+roll = input("Enter roll number: ")
+
+student = {
+        "name": name,
+        "semester": semester,
+        "roll": roll
+    }
+
+print("\n--- All Students Data ---")
+for i, s in enumerate(students, start=1):
+    print(f"\nStudent {i}")
+    print("Name:", s["name"])
+    print("Semester:", s["semester"])
+    print("Roll:", s["roll"])
