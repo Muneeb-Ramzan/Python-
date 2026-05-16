@@ -1,0 +1,9 @@
+def login(name,password):
+    if name=="Muneeb" and password== 8855 :
+        print("login successfull")
+    else:
+        print("login failed")
+
+       # return  name,password
+    
+login("Muneeb",8855)
